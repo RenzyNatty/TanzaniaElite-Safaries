@@ -1,0 +1,51 @@
+@import "tailwindcss";
+
+@theme {
+  --font-serif: "Cormorant Garamond", Georgia, serif;
+  --font-sans: "Inter", system-ui, sans-serif;
+  --color-safari-50: #fdf8f1;
+  --color-safari-100: #f5ecd9;
+  --color-safari-200: #e8d5a8;
+  --color-safari-300: #d4b574;
+  --color-safari-400: #c49a4d;
+  --color-safari-500: #a87a2e;
+  --color-safari-600: #8a5f22;
+  --color-safari-700: #6b4718;
+  --color-safari-800: #4a3111;
+  --color-safari-900: #2a1c0a;
+  --color-safari-950: #1a1107;
+  --color-savanna: #8b7355;
+  --color-olive: #4a5d3a;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-sans);
+  color: #1a1107;
+  background: #fdf8f1;
+}
+
+.font-serif {
+  font-family: var(--font-serif);
+}
+
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(24px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+.animate-fadeUp { animation: fadeUp 0.9s ease-out both; }
+
+@keyframes slowZoom {
+  from { transform: scale(1); }
+  to   { transform: scale(1.08); }
+}
+.animate-slowZoom { animation: slowZoom 18s ease-in-out infinite alternate; }
+
+/* Thin scrollbar */
+::-webkit-scrollbar { width: 10px; height: 10px; }
+::-webkit-scrollbar-track { background: #f5ecd9; }
+::-webkit-scrollbar-thumb { background: #a87a2e; border-radius: 10px; }
+::-webkit-scrollbar-thumb:hover { background: #8a5f22; }
